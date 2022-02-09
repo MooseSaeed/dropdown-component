@@ -11,13 +11,13 @@
 
 <body>
 
-    <h1 class="text-red-500">Tailwind is working</h1>
+    <div class="space-y-2 lg:space-y-0 lg:space-x-4 mt-8" id="app">
+        <div class="relative lg:inline-flex items-center bg-blue-100 rounded-xl">
 
-    @foreach ($users as $user)
+            <router-view />
 
-        <p>The name of the user is: {{ $user->name }}</p>
-
-    @endforeach
+        </div>
+    </div>
 
 </body>
 
