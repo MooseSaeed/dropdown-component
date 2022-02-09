@@ -7,17 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dropdown</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
 <body>
 
-    <div class="space-y-2 lg:space-y-0 lg:space-x-4 mt-8" id="app">
-        <div class="relative lg:inline-flex items-center bg-blue-100 rounded-xl">
+    <main class="max-w-6xl mx-auto mt-6 lg:mt-20 space-y-6" id="app">
 
-            <router-view />
+        <div class="max-w-xl mx-auto mt-10 text-center">
+            <div class="space-y-2 lg:space-y-0 lg:space-x-4 mt-8" id="app">
+                <div class="relative lg:inline-flex items-center bg-blue-100 rounded-xl">
 
+                    <router-view />
+
+                </div>
+            </div>
         </div>
-    </div>
+
+    </main>
 
 </body>
 

@@ -427,16 +427,55 @@ Ensure the default browser behavior of the `hidden` attribute.
 .relative {
   position: relative;
 }
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mt-6 {
+  margin-top: 1.5rem;
+}
+.mt-10 {
+  margin-top: 2.5rem;
+}
 .mt-8 {
   margin-top: 2rem;
 }
+.mt-1 {
+  margin-top: 0.25rem;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.max-h-52 {
+  max-height: 13rem;
+}
+.w-full {
+  width: 100%;
+}
+.max-w-6xl {
+  max-width: 72rem;
+}
+.max-w-xl {
+  max-width: 36rem;
+}
 .items-center {
   align-items: center;
+}
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+.overflow-auto {
+  overflow: auto;
 }
 .rounded-xl {
   border-radius: 0.75rem;
@@ -445,14 +484,38 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(219 234 254 / var(--tw-bg-opacity));
 }
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.pl-3 {
+  padding-left: 0.75rem;
+}
+.pr-9 {
+  padding-right: 2.25rem;
+}
+.text-center {
+  text-align: center;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.font-semibold {
+  font-weight: 600;
 }
 @media (min-width: 1024px) {
 
+  .lg\:mt-20 {
+    margin-top: 5rem;
+  }
+
   .lg\:inline-flex {
     display: inline-flex;
+  }
+
+  .lg\:w-32 {
+    width: 8rem;
   }
 
   .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]) {

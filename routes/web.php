@@ -2,6 +2,7 @@
 
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\HttpFoundation\Response;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,10 @@ Route::get('/', function () {
     return view('welcome', [
         'users' => User::all()
     ]);
+});
+
+Route::get('list', function () {
+    return response()->json([
+        'users' => \App\Models\User::all()
+    ], Response::HTTP_OK);
 });
