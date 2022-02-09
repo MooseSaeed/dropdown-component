@@ -10,6 +10,12 @@
 
 <body>
 
+    @foreach ($users as $user)
+
+        <p>The name of the user is: {{ $user->name }}</p>
+
+    @endforeach
+
 </body>
 
 </html>
