@@ -1,14 +1,24 @@
 <template>
-    <div
-        v-show="usersToggle"
-        class="absolute left-0 right-0 z-50 mt-2 w-full rounded-lg bg-blue-100 bg-gradient-to-r from-purple-600 to-blue-500 py-2"
+    <transition
+        :duration="1000"
+        enter-active-class="transform transition duration-300 ease-custom"
+        enter-class="-translate-y-1/2 scale-y-0 opacity-0"
+        enter-to-class="translate-y-0 scale-y-100 opacity-100"
+        leave-active-class="transform transition duration-300 ease-custom"
+        leave-class="translate-y-0 scale-y-100 opacity-100"
+        leave-to-class="-translate-y-1/2 scale-y-0 opacity-0"
     >
-        <slot />
-    </div>
+        <div
+            v-show="usersToggle"
+            class="absolute left-0 right-0 z-50 mt-2 w-full rounded-lg bg-gradient-to-r from-purple-600 to-blue-500 py-1 px-3 text-left text-sm font-semibold text-white transition duration-300 py-2"
+        >
+            <slot />
+        </div>
+    </transition>
 </template>
 
 <script>
-import { inject } from "vue";
+import { inject, ref } from "vue";
 export default {
     name: "Dropdowncontent",
 
