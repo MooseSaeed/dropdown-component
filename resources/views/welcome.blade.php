@@ -18,19 +18,7 @@
             <div class="space-y-2 lg:space-y-0 lg:space-x-4 mt-8" id="app">
                 <div class="relative lg:inline-flex items-center bg-blue-100 rounded-xl mx-2">
 
-
-                    {{-- <router-view /> --}}
-
-                    <Dropdown title="Users Dropdown">
-
-                        <Dropdowncontent>
-                            @foreach ($users as $user)
-                                <Dropdownitems item="{{ $user->name }}" href="/users/{{ $user->id }}">
-                                </Dropdownitems>
-                            @endforeach
-                        </Dropdowncontent>
-
-                    </Dropdown>
+                    <x-users-dropdown />
 
                 </div>
             </div>
