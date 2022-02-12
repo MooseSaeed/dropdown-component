@@ -1,14 +1,17 @@
 require("./bootstrap");
 
 import { createApp } from "vue";
-import router from "./router";
-import DropdownComponent from "./components/DropdownComponent";
+import Dropdown from "./components/Dropdown";
+import Dropdowncontent from "./components/Dropdowncontent";
+import Dropdownitems from "./components/Dropdownitems";
 import vClickOutside from "click-outside-vue3";
 
 createApp({
     components: {
-        DropdownComponent,
+        Dropdown,
+        Dropdowncontent,
+        Dropdownitems,
     },
 })
-    .use(router, vClickOutside)
+    .use(vClickOutside)
     .mount("#app");
